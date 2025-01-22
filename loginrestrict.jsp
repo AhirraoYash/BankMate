@@ -1,0 +1,14 @@
+<%
+if(session.getAttribute("semail")==null){
+	%>
+	<script>window.location.href="login.jsp";</script>
+	<%
+}
+%>
+<%
+if(session.getAttribute("city")==null){
+	%>
+	<script>window.location.href="login.jsp";</script>
+	<%
+}
+%>
