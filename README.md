@@ -28,8 +28,44 @@ BankMate is an innovative cash delivery service designed to assist elderly and p
 
 ---
 
-## Installation
+**How to Install and Run BankMate on Localhost**
+Prerequisites
+Software Required:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YashAhirrao/BankMate.git
+Java Development Kit (JDK)
+PostgreSQL with pgAdmin
+Apache Tomcat
+Eclipse IDE
+Git
+**Database Setup:**
+
+Install PostgreSQL and create a database named BankMate.
+Import the provided SQL scripts to set up tables (dbuser, serviceprovider, request).
+Steps to Install and Run
+**Clone the Repository:**
+
+bash
+Copy
+Edit
+git clone https://github.com/YourUsername/BankMate.git
+cd BankMate
+**Import Project in Eclipse:**
+
+Open Eclipse and select File > Import > Existing Projects into Workspace.
+Select the cloned BankMate project folder.
+**Configure the Database Connection:**
+
+Open the Mylib utility class.
+Ensure the database URL, username, and password match your local PostgreSQL setup:
+java
+Copy
+Edit
+DriverManager.getConnection("jdbc:postgresql://localhost:5432/BankMate", "postgres", "postgres");
+**Deploy on Apache Tomcat:**
+
+Add Apache Tomcat in Eclipse (Servers > New > Server).
+Right-click the project > Run As > Run on Server.
+Access the Application:
+
+**Open your browser and navigate to:**
+http://localhost:8080/BankMate
